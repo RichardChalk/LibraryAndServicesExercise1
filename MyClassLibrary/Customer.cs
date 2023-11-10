@@ -2,7 +2,7 @@
 {
     public class Customer
     {
-        public Guid CustomerId { get; set; }
+        public int CustomerId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string? Address { get; set; }
@@ -10,9 +10,9 @@
         public string? City { get; set; }
         public bool? IsVIP { get; set; }
 
-        public Customer(string name, string email)
+        public Customer(int id, string name, string email)
         {
-            CustomerId = Guid.NewGuid();
+            CustomerId = id;
             Name = name;
             Email = email;
         }
